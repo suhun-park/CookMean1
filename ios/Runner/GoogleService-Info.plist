@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>882551610338-m1n52e16rfgdbge9mhhli4uphkou1dno.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.882551610338-m1n52e16rfgdbge9mhhli4uphkou1dno</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCyQCPlguNrlTi9Ed2dsc8vcRIl3t3Hn4s</string>
+	<key>GCM_SENDER_ID</key>
+	<string>882551610338</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.cookmean</string>
+	<key>PROJECT_ID</key>
+	<string>cookmean-60eed</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cookmean-60eed.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:882551610338:ios:1ef9d281d4f05ef806f7bb</string>
+</dict>
+</plist>

@@ -1,0 +1,166 @@
+name: cookmean
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.0 <3.0.0'
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+  video_player: ^2.4.7
+  youtube_player_flutter:  ^8.1.0
+  flutter_native_splash: ^2.2.11
+  photofilters: ^3.0.1
+  multi_image_picker: ^4.8.1
+  table_calendar: ^3.0.7
+  intl: ^0.17.0
+  provider: ^6.0.4
+  modal_bottom_sheet: ^2.1.2
+  flutter_holo_date_picker: ^1.1.0
+  wechat_assets_picker: ^8.1.3
+  floatingpanel: ^1.1.3
+  flutter_speed_dial:
+  get:
+  go_router:
+  bloc:
+  image_picker:
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  cloud_firestore: ^3.5.1
+  firebase_core: ^1.24.0
+  firebase_storage: ^10.3.11
+  file_picker: ^5.2.2
+
+flutter_native_splash:
+  color: "#E4E6E5"
+  image: assets/images/오늘뭐먹지.png
+  fullscreen: true
+  android_gravity: center
+  ios_content_mode: center
+  android12: true
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+
+
+
+
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^2.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/cook.png
+    - assets/images/day.png
+    - assets/images/home.png
+    - assets/images/shopping.png
+    - assets/images/user.png
+    - assets/images/sushi.png
+    - assets/images/백종원레시피.jpeg
+    - assets/images/백종원된장찌개.jpeg
+    - assets/images/백종원부대찌개.jpeg
+    - assets/images/백종원소불고기.jpeg
+    - assets/images/일식경양식.jpeg
+    - assets/images/일식연돈볼카츠.jpeg
+    - assets/images/일식볶음우동.jpeg
+    - assets/images/일식고기카레.jpeg
+    - assets/images/중식중화제육면.jpeg
+    - assets/images/중식고추잡채.jpeg
+    - assets/images/중식옛날짬뽕.jpeg
+    - assets/images/중식짜장떡볶이.jpeg
+    - assets/images/양식크림파스타.jpeg
+    - assets/images/양식치킨스테이크.jpeg
+    - assets/images/양식감바스.jpeg
+    - assets/images/양식토마토스튜.jpeg
+    - assets/images/splash.png
+    - assets/images/스파게티.png
+    - assets/images/짜장면.png
+    - assets/images/밥.png
+    - assets/images/초밥.png
+    - assets/images/거래.png
+    - assets/images/커뮤니티.png
+    - assets/images/로그인이미지.png
+    - assets/images/kakaologin.png
+    - assets/images/가리비.png
+    - assets/images/맛김치800g.png
+    - assets/images/비비고.png
+    - assets/images/새우딱새우.png
+    - assets/images/시원한배추김치.png
+    - assets/images/고등어구이.png
+    - assets/images/김치.jpeg
+    - assets/images/간장.jpeg
+    - assets/images/계란.jpeg
+    - assets/images/배추.jpeg
+    - assets/images/까나리젓.jpeg
+    - assets/images/소금.jpeg
+    - assets/images/시금치.jpeg
+    - assets/images/양파.jpeg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+     - family: cookmean
+       fonts:
+         - asset: assets/fonts/안동엄마까투리.dmg
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages

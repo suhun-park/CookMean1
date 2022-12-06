@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "882551610338",
+    "project_id": "cookmean-60eed",
+    "storage_bucket": "cookmean-60eed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882551610338:android:a3003f74f2f77e7906f7bb",
+        "android_client_info": {
+          "package_name": "com.example.cookmean"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "882551610338-9tqbet0orsv47uo1bq7ujuv5hp1uojkm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcj3Lrf1KRlSOVYGYiKWq1ec3NfvU8LjY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "882551610338-9tqbet0orsv47uo1bq7ujuv5hp1uojkm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
