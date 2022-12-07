@@ -87,14 +87,26 @@ class _RecipeWriteState extends State<RecipeWrite> {
                       future: _intializeVideoPlayerFuture,
                       builder: (context, snapshot) {
                         if (snapshot.connectionState == ConnectionState.done) {
-
                           return AspectRatio(
                             aspectRatio: _controller.value.aspectRatio,
 
                             child: VideoPlayer(_controller),
                           );
                         } else {
-                          return Center(child: CircularProgressIndicator());
+                          print("안됨");
+                          return
+                            Container(
+                              width: 50, height: 50,
+                              child:FloatingActionButton(
+                                  heroTag: '동영상',
+                                  backgroundColor: Colors.grey,
+                                  child: Icon(Icons.camera_alt,color: Colors.black,size: 10,),
+                                  shape: RoundedRectangleBorder(),
+                                  onPressed: ()async {
+                                    await videoAdd();
+                                  }
+                              ),
+                            );
                         }
                       },
                     ),
@@ -105,18 +117,6 @@ class _RecipeWriteState extends State<RecipeWrite> {
 
                   TextForm(), //텍스트폼 클래스
 
-                  Align(
-                    alignment: Alignment.bottomLeft,
-                    child: FloatingActionButton(
-                        heroTag: '동영상',
-                        backgroundColor: Colors.grey,
-                        child: Icon(Icons.camera_alt,color: Colors.black,size: 10,),
-                        shape: RoundedRectangleBorder(),
-                        onPressed: ()async {
-                          await videoAdd();
-                        }
-                    ),
-                  )
                 ],
               ),
             ),
@@ -125,16 +125,3 @@ class _RecipeWriteState extends State<RecipeWrite> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

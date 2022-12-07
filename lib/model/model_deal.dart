@@ -8,7 +8,8 @@ class DealModel {
   Timestamp? date;
   String? location;
   String? nickname;
-  String? dateString;
+  int? number;
+  String? id;
 
   DealModel(
       {this.title,
@@ -18,7 +19,9 @@ class DealModel {
         this.date,
         this.location,
         this.nickname,
-        this.dateString});
+        this.number,
+        this.id,
+        });
 
   DealModel.fromJson(Map<String, dynamic> json) {
     title = json['title'];
@@ -28,6 +31,8 @@ class DealModel {
     date = json['date'];
     location = json['location'];
     nickname = json['nickname'];
+    number = json['number'];
+    id = json['id'];
   }
 
   Map<String, dynamic> toJson() {
@@ -39,7 +44,8 @@ class DealModel {
     data['date'] = date;
     data['location'] = location;
     data['nickname'] = nickname;
-    data['dateString'] = dateString;
+    data['number'] = number;
+    data['id'] = id;
     return data;
   }
 }

@@ -87,7 +87,7 @@ class Login extends GetView<ScanController> {
                   Row(
                     children: const [
                       SizedBox(
-                        width: 70, height: 50,
+                        width: 70, height: 20,
                       ),
                       Text("아이디 찾기"),
                       SizedBox(
