@@ -1,3 +1,4 @@
+import 'package:cookmean/user_community_page/userdeal/user_community_deal_write.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -19,7 +20,6 @@ class Deal extends GetView<MainController> {
   @override
   Widget build(BuildContext context) {
     final List<String> list = List.generate(10, (index) => 'Text $index');
-    final controller = Get.put(MainController());
 
     return Obx(
       () => Scaffold(
@@ -48,23 +48,27 @@ class Deal extends GetView<MainController> {
             ),
           ),
           body: homeIndex(),
-          bottomNavigationBar: homeBottom()),
-    );
+        bottomSheet: homeBottom(),
+    ));
   }
 
   Widget homeIndex() {
-    return Container(
+    return
+      Container(
         child: ListView.builder(
             itemCount: controller.image!.length,
             itemBuilder: (context, index) {
-              return GestureDetector(child: Card(
-                elevation: 5,
+              return
+                 Card(
+                   elevation: 5,
+                     child:GestureDetector(
                   child: ListTile(
                 leading: Image.asset(controller.image!.elementAt(index), height: 100,width :80,fit: BoxFit.fill,),
                 title: Text("${controller.title![index]}"),
                     subtitle: Text("${controller.contents![index]}"),
               )));
-            }));
+            }),
+   );
   }
 
   Widget homeBottom() {

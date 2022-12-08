@@ -33,7 +33,6 @@ class UserWrite extends StatefulWidget {
   State<UserWrite> createState() => _UserWriteState();
 }
 class _UserWriteState extends State<UserWrite> {
-  String dropdownValue = writeSelection.first;
 
   FirebaseFirestore firestore = FirebaseFirestore.instance;
   FirebaseStorage _firebaseStorage = FirebaseStorage.instance;
@@ -67,30 +66,6 @@ class _UserWriteState extends State<UserWrite> {
       scrollDirection: Axis.vertical,
        child: Column(
         children: [
-          Container(
-       alignment: Alignment.topLeft,
-         child: DropdownButton(
-            value: dropdownValue,
-            onChanged: (String? value) {
-              // This is called when the user selects an item.
-              setState(() {
-                dropdownValue = value!;
-              });
-              if(dropdownValue != "거래페이지 글쓰기") {
-                Get.to(UserViewWrite());
-              }else{
-                Get.to(UserDealWrite());
-              }
-            },
-           items: writeSelection.map<DropdownMenuItem<String>>((String value) {
-             return DropdownMenuItem<String>(
-               value: value,
-               child: Text(value),
-             );
-           }).toList(),
-
-          ),
-          ),
           Container(
             child: SizedBox(
                 width: 1000, height: 90,
@@ -171,14 +146,17 @@ class _UserWriteState extends State<UserWrite> {
               child: Text('보내기'),
               onPressed: () async {
                 await FirebaseFirestore.instance
-                    .collection('cookRecipe')
+                    .collection('cookMeanUser')
                     .doc()
                     .set(
                   {
-                    'Title': postTitle,
-                    'Text': postText,
-                    'Price': postPrice,
-                    "now" : now,
+                    'title': postTitle,
+                    'text': postText,
+                    'price': postPrice,
+                    "like" : false,
+                    "location" : "부천시",
+                    "date" : now,
+                    "nickname" : "박수훈",
                   },
                 );
 

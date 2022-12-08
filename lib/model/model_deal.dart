@@ -8,7 +8,6 @@ class DealModel {
   Timestamp? date;
   String? location;
   String? nickname;
-  int? number;
   String? id;
 
   DealModel(
@@ -19,7 +18,6 @@ class DealModel {
         this.date,
         this.location,
         this.nickname,
-        this.number,
         this.id,
         });
 
@@ -31,7 +29,6 @@ class DealModel {
     date = json['date'];
     location = json['location'];
     nickname = json['nickname'];
-    number = json['number'];
     id = json['id'];
   }
 
@@ -44,7 +41,6 @@ class DealModel {
     data['date'] = date;
     data['location'] = location;
     data['nickname'] = nickname;
-    data['number'] = number;
     data['id'] = id;
     return data;
   }

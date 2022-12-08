@@ -102,7 +102,7 @@ class Login extends GetView<ScanController> {
                   ),
                   Expanded(child:
                   IconButton(onPressed: () {
-                    if(loginFormkey!.currentState!.validate()){Get.to(MainPage(),);}}
+                    /*if(loginFormkey!.currentState!.validate()){*/Get.to(MainPage(),);}//}
                       ,icon:  Image.asset('assets/images/kakaologin.png',),iconSize:200)
                   ),
                 ],

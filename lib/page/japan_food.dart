@@ -1,3 +1,4 @@
+import 'package:cookmean/page/writepage/write_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../model/model_recipe.dart';
@@ -50,36 +51,73 @@ class _JapanFoodState extends State<JapanFood> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: japan_Cook_Title.length,
-      itemBuilder: (context, index){
-        return Card(
-          color: Colors.orange.withOpacity(0.2),
-          child: GestureDetector(
-            onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>JapanPage(japan_Cook_Model: japan_Cook_Data[index],)));
-            },
-            child:Container(
-              child: Column(
-                children: [
-                  SizedBox(
-                    width: 500,
-                    height: 200,
-                    child:Image.asset(japan_Cook_Image[index],fit:BoxFit.fill,width: 100,height: 100,),
-                  ),
-                  SizedBox(height: 10,),
-                  Text(japan_Cook_Title[index],),
-                  SizedBox(height: 10,),
-                ],
+    return Container(
+      color: Colors.blue.withOpacity(0.2),
+      child:Column(
+          children:[
+            Expanded(
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: japan_Cook_Title.length,
+                  itemBuilder: (context, index) {
+                    return Column(children: [Card(
+                      color: Colors.orange.withOpacity(0.2),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) =>
+                                  JapanPage(
+                                    japan_Cook_Model: japan_Cook_Data[index],)));
+                        },
+                        child: Container(
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                width: 500,
+                                height: 200,
+                                child: Image.asset(
+                                  japan_Cook_Image[index], fit: BoxFit.fill,
+                                  width: 100,
+                                  height: 100,),
+                              ),
+                              SizedBox(height: 10,),
+                              Text(japan_Cook_Title[index],),
+                              SizedBox(height: 10,),
 
-              ),
+                            ],
+
+                          ),
+                        ),
+
+                      ),
+                    ),
+
+                    ],);
+                  },
+                )
+
             ),
+            Stack(
+              children: [Row(
+                mainAxisAlignment : MainAxisAlignment.end,
 
-          ),
-        );
-      },
-    );
+                children:[
+                  Text('광고'),
+                  Container(
+                    margin: EdgeInsets.fromLTRB(70, 0, 10, 10),
+                    child:
+                    FloatingActionButton(
+                      onPressed: () async{
+                        Navigator.push( context,
+                            MaterialPageRoute(builder: (context) => WritePage()));},
+                      child :Icon(Icons.add),splashColor: Colors.white,backgroundColor: Colors.orange,
+                    ),
 
-
-  }
-}
+                  ),
+                ],
+              )
+              ],
+            ),
+          ]
+      ),
+    );}}
