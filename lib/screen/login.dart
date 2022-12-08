@@ -34,7 +34,7 @@ class Login extends GetView<ScanController> {
                   ),
                   Image.asset('assets/images/로그인이미지.png',scale: 2, ),
                   const SizedBox(
-                    height: 100,
+                    height: 70,
                   ),
                   SizedBox(width: 250,child:
                   TextFormField(
@@ -100,9 +100,11 @@ class Login extends GetView<ScanController> {
                       Text("회원가입"),
                     ],
                   ),
+                  Expanded(child:
                   IconButton(onPressed: () {
-                    /*if(loginFormkey!.currentState!.validate()){*/Get.to(MainPage(),);}//}
+                    if(loginFormkey!.currentState!.validate()){Get.to(MainPage(),);}}
                       ,icon:  Image.asset('assets/images/kakaologin.png',),iconSize:200)
+                  ),
                 ],
               ),
             ),
