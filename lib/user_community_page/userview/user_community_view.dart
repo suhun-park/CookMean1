@@ -58,9 +58,7 @@ class UserViewState extends State<UserView> {
                             // container
                           }
                           List<DealModel> list = snapshot.data!;
-                          return SingleChildScrollView(
-                              scrollDirection: Axis.vertical,
-                              child: ListView.builder(
+                          return ListView.builder(
                                 shrinkWrap: true,
                                 itemCount: list.length,
                                 itemBuilder: (context, index) {
@@ -198,7 +196,7 @@ class UserViewState extends State<UserView> {
                                                 )))),
                                   ]);
                                 },
-                              ));
+                              );
                         });
                   }),
             ],

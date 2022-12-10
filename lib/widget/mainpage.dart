@@ -51,7 +51,7 @@ class MainPage extends GetView<MainController> {
         Community(),
         Shopping(),
         const Day(),
-        const User(),
+        const UserView(),
       ],
     );
   }

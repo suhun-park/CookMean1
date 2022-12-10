@@ -54,6 +54,7 @@ class Deal extends GetView<MainController> {
 
   Widget homeIndex() {
     return
+
       Container(
         child: ListView.builder(
             itemCount: controller.image!.length,

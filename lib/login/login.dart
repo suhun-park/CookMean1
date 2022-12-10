@@ -1,4 +1,6 @@
 import 'package:cookmean/controller/scan_controller.dart';
+import 'package:cookmean/login/kakao_model.dart';
+import 'package:cookmean/login/social_login.dart';
 import 'package:cookmean/widget/mainpage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +8,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
 import '../widget/first.dart';
+import 'login.dart';
 
 class Login extends GetView<ScanController> {
   const Login({Key? key}) : super(key: key);
@@ -13,6 +16,7 @@ class Login extends GetView<ScanController> {
   @override
 
   Widget build(BuildContext context) {
+    final viewModel = KakaoModel(KakaoLogin());
     final controller = Get.put(ScanController());
     final loginFormkey = GlobalKey<FormState>();
     String id = "박수훈";
@@ -101,8 +105,10 @@ class Login extends GetView<ScanController> {
                     ],
                   ),
                   Expanded(child:
-                  IconButton(onPressed: () {
-                    /*if(loginFormkey!.currentState!.validate()){*/Get.to(MainPage(),);}//}
+                  IconButton(onPressed: () async{
+                    await viewModel.login();
+                    Get.to(MainPage());
+                    }
                       ,icon:  Image.asset('assets/images/kakaologin.png',),iconSize:200)
                   ),
                 ],

@@ -13,7 +13,7 @@ import '../user_community_page/userdeal/user_community_deal.dart';
 import '../user_community_page/userdeal/user_community_deal_write.dart';
 import '../user_community_page/userview/user_community_write.dart';
 import '../widget/mainpage.dart';
-import 'login.dart';
+import '../login/login.dart';
 
 class Community extends StatefulWidget {
   const Community({super.key});
