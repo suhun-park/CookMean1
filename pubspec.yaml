@@ -48,6 +48,7 @@ dependencies:
   go_router:
   bloc:
   image_picker:
+  http:
 
 
   # The following adds the Cupertino Icons font to your application.
